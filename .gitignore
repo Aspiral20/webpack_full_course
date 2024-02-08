@@ -1,6 +1,10 @@
 # Deps
 node_modules
 
+# Build
+*dist
+*build
+
 # Envs
 .env*
 !.env.example

@@ -1,0 +1,9 @@
+# Deps
+node_modules
+
+# Envs
+.env*
+!.env.example
+
+# JetBrains
+.idea

@@ -1,6 +1,7 @@
 import Dotenv from "dotenv-webpack";
+import type { Options } from 'dotenv-webpack'
 
-const options = {
+const options: Options = {
   path: './.env',
   safe: true
 }

@@ -5,14 +5,15 @@
   "license": "MIT",
   "main": "index.ts",
   "scripts": {
-    "start": "webpack serve --env NODE_ENV=development",
-    "build": "webpack --env NODE_ENV=development BUILDING=true",
-    "build:prod": "webpack --env NODE_ENV=production BUILDING=true"
+    "start": "webpack serve --env WEBPACK_MODE=development",
+    "build": "webpack --env BUILDING=true WEBPACK_MODE=development",
+    "build:prod": "webpack --env BUILDING=true WEBPACK_MODE=production"
   },
   "dependencies": {
     "dotenv": "^16.4.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
     "@types/dotenv-webpack": "^7.0.7",
@@ -21,9 +22,13 @@
     "@types/react-dom": "^18.2.19",
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.2",
-    "babel-loader": "^9.1.3",
+    "css-loader": "^6.10.0",
     "dotenv-webpack": "^8.0.1",
     "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.8.0",
+    "sass": "^1.70.0",
+    "sass-loader": "^14.1.0",
+    "style-loader": "^3.3.4",
     "ts-loader": "9.5.0",
     "ts-node": "^10.9.2",
     "tsconfig-paths-webpack-plugin": "^4.1.0",

@@ -2,7 +2,8 @@ export enum EnvsEnum {
   WEBPACK_MODE = 'WEBPACK_MODE',
   NODE_ENV = 'NODE_ENV',
   PORT = 'PORT',
-  BUILDING = 'BUILDING'
+  BUILDING = 'BUILDING',
+  ANALYZER = 'ANALYZER',
 }
 
 export enum NodeEnvWebpackEnum {

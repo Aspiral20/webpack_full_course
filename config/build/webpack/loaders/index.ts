@@ -7,6 +7,11 @@ const loaders = (options: BuildOptionsType): ModuleOptions["rules"] => {
 
   const isDev = mode === 'development'
 
+  const assetsLoader = {
+    test: /\.(png|svg|jpg|jpeg|gif)$/i,
+    type: 'asset/resource',
+  }
+
   const cssLoaderWithModules = {
     loader: 'css-loader',
     options: {
@@ -31,6 +36,7 @@ const loaders = (options: BuildOptionsType): ModuleOptions["rules"] => {
   }
 
   return [
+    assetsLoader,
     scssLoader,
     tsLoader
   ]

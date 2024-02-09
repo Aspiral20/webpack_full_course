@@ -4,6 +4,7 @@ export type BuildPathsType = {
   entry: string
   output: string
   html: string
+  src: string
 }
 
 export type BuildOptionsType = {
@@ -11,4 +12,5 @@ export type BuildOptionsType = {
   paths: BuildPathsType
   mode: Configuration["mode"]
   isBuilding: boolean
+  analyzer?: boolean
 }

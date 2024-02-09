@@ -8,14 +8,16 @@ const config = (env: ConfigEnvType): webpack.Configuration => {
   const paths: BuildPathsType = {
     html: path.resolve('public', 'index.html'),
     entry: path.resolve('src', 'index.tsx'),
-    output: path.resolve('build')
+    output: path.resolve('build'),
+    src: path.resolve('src')
   }
 
   const options: BuildOptionsType = {
     port: parseInt(env.PORT) || 3000,
     paths,
     mode: (env.WEBPACK_MODE ?? "development") as Configuration["mode"],
-    isBuilding: env.BUILDING === "true"
+    isBuilding: env.BUILDING === "true",
+    analyzer: !!env.ANALYZER
   }
 
   return buildWebpack(options)

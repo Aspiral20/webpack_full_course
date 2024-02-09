@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { App } from "@/_layouts";
+import React, { Suspense } from "react";
 import Shop from '@/pages/shop'
 import About from "@/pages/about";
 
@@ -9,12 +10,12 @@ export const router = createBrowserRouter([
     element: <App/>,
     children: [
       {
-        path: '/about',
-        element: <Shop/>
+        path: '/shop',
+        element: <Suspense fallback={"Loading..."} children={<Shop/>}/>
       },
       {
-        path: '/shop',
-        element: <About/>
+        path: '/about',
+        element: <Suspense fallback={"Loading..."} children={<About/>}/>
       }
     ]
   },

@@ -9,7 +9,9 @@ const config = (env: ConfigEnvType): webpack.Configuration => {
     html: path.resolve('public', 'index.html'),
     entry: path.resolve('src', 'index.tsx'),
     output: path.resolve('build'),
-    src: path.resolve('src')
+    src: path.resolve('src'),
+    dotenv: path.resolve('.env'),
+    resolveTsconfigPaths: path.resolve('tsconfig.json'),
   }
 
   const options: BuildOptionsType = {

@@ -5,6 +5,8 @@ export type BuildPathsType = {
   output: string
   html: string
   src: string
+  dotenv: string
+  resolveTsconfigPaths: string
 }
 
 export type BuildOptionsType = {

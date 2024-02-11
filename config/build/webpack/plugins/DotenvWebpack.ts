@@ -1,9 +1,15 @@
 import Dotenv from "dotenv-webpack";
 import type { Options } from 'dotenv-webpack'
+import { BuildOptionsType } from "../types/config.types";
 
-const options: Options = {
-  path: './.env',
-  safe: true
+const withOptionsDotenv = (options: BuildOptionsType) => {
+  const { paths } = options
+  const pluginOptions: Options = {
+    path: paths.dotenv,
+    safe: true
+  }
+
+  return new Dotenv(pluginOptions)
 }
 
-export default new Dotenv(options)
+export default withOptionsDotenv

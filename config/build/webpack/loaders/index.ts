@@ -7,8 +7,16 @@ const loaders = (options: BuildOptionsType): ModuleOptions["rules"] => {
 
   const isDev = mode === 'development'
 
+  const svgToJsxLoader = {
+    test: /\.svg$/i,
+    use:  ['@svgr/webpack'],
+    issuer: {
+      and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
+    },
+  }
+
   const assetsLoader = {
-    test: /\.(png|svg|jpg|jpeg|gif)$/i,
+    test: /\.(png|jpg|jpeg)$/i,
     type: 'asset/resource',
   }
 
@@ -36,6 +44,7 @@ const loaders = (options: BuildOptionsType): ModuleOptions["rules"] => {
   }
 
   return [
+    svgToJsxLoader,
     assetsLoader,
     scssLoader,
     tsLoader

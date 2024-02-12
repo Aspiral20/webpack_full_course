@@ -16,6 +16,7 @@
     "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/dotenv-webpack": "^7.0.7",
     "@types/node": "^20.11.16",
     "@types/react": "^18.2.55",
